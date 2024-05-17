@@ -17,15 +17,10 @@ Este proyecto proporciona una API RESTful para diagnosticar enfermedades respira
 ## Instalación
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tu-repo/api-diagnostico-enfermedades-respiratorias.git
-   cd api-diagnostico-enfermedades-respiratorias
+   git clone https://github.com/JhankiNegrete/diagnosticador_er
+   cd diagnosticador_er
    ```
-2. Crea un entorno virtual:
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # En Windows usa `venv\Scripts\activate`
-   ```
-3. Instala los paquetes requeridos:
+2. Instala los paquetes requeridos:
    ```sh
    pip install -r requirements.txt
    ```
@@ -34,9 +29,9 @@ Este proyecto proporciona una API RESTful para diagnosticar enfermedades respira
 1. Asegúrate de tener el archivo de datos `datos.arff` en el directorio del proyecto.
 2. Ejecuta la aplicación Flask:
    ```sh
-   python app.py
+   python diagnosticador.py
    ```
-3. La API estará disponible en `http://127.0.0.1:5000/diagnostico`.
+3. El endpoint de la API estará disponible en `http://127.0.0.1:5000/diagnostico`.
 
 ## Endpoint de la API
 
@@ -51,9 +46,11 @@ Haz una solicitud POST a este endpoint con un cuerpo JSON que contenga los sínt
   "fiebre_leve": int,  # 0 o 1
   "fiebre_moderada": int,  # 0 o 1 (opcional)
   "fiebre_alta": int,  # 0 o 1 (opcional)
+   # un solo valor de fiebre debe tener un (1)
   "tos_leve": int,  # 0 o 1
   "tos_moderada": int,  # 0 o 1 (opcional)
   "tos_severa": int,  # 0 o 1 (opcional)
+   # un solo valor de tos debe tener un (1)
   "congestion_nasal_no": int,  # 0 o 1
   "dificultad_respiratoria_no": int,  # 0 o 1
   "dolor_garganta_no": int,  # 0 o 1
@@ -69,8 +66,8 @@ Haz una solicitud POST a este endpoint con un cuerpo JSON que contenga los sínt
 ```
 
 ## Ejemplo de Solicitud
-```sh
-curl -X POST http://127.0.0.1:5000/diagnostico -H "Content-Type: application/json" -d '{
+```json
+'{
   "edad": 30,
   "genero": 1,
   "fiebre_leve": 1,
@@ -88,12 +85,12 @@ curl -X POST http://127.0.0.1:5000/diagnostico -H "Content-Type: application/jso
 
 ## Estructura del Proyecto
 ```
-api-diagnostico-enfermedades-respiratorias/
-├── app.py  # Archivo principal de la aplicación
+ diagnosticador_er/
+├── diagnosticador.py  # Archivo principal de la aplicación
 ├── datos.arff  # Archivo de datos
 ├── requirements.txt  # Paquetes de Python requeridos
+├── collection_detector_er.json #Coleccion de Postman para hacer pruebas a la API
 └── README.md  # Archivo README del proyecto
+
 ```
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT.

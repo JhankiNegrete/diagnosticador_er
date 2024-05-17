@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "4425a312-f13f-4878-a64e-efecd30a2bb8",
+		"name": "Detector de Enfermedades",
+		"description": "Para ver el resultado tiene que ejecutar el metodo POST a la ruta diagnostico.\n\n<img src=\"https://content.pstmn.io/ebd351f0-b9d7-41f0-ba20-0fdfa23f74ea/aW1hZ2UucG5n\" alt=\"\" height=\"1020\" width=\"1919\">",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25546680"
+	},
+	"item": [
+		{
+			"name": "Post Sintomas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"edad\": 30,\r\n    \"genero\": 1,\r\n    \"fiebre_leve\": 1,\r\n    \"fiebre_moderada\": 0,\r\n    \"fiebre_alta\": 0,\r\n    \"tos_leve\": 1,\r\n    \"tos_moderada\": 0,\r\n    \"tos_severa\": 0,\r\n    \"congestion_nasal_no\": 0,\r\n    \"dificultad_respiratoria_no\": 1,\r\n    \"dolor_garganta_no\": 1,\r\n    \"malestar_general_no\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/diagnostico",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"diagnostico"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1",
+			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "http://127.00.1:5000/"
+		}
+	]
+}
