@@ -1,0 +1,70 @@
+@relation enfermedades_respiratorias
+
+@attribute edad numeric
+@attribute genero {masculino, femenino}
+@attribute fiebre {leve, moderada, alta}
+@attribute tos {leve, moderada, severa}
+@attribute congestion_nasal {si, no}
+@attribute dificultad_respiratoria {si, no}
+@attribute dolor_garganta {si, no}
+@attribute malestar_general {si, no}
+@attribute diagnostico {resfriado, gripe, bronquitis, neumonia, otro}
+
+@data
+30, masculino, leve, leve, si, no, no, si, resfriado
+40, femenino, moderada, moderada, si, no, si, si, gripe
+25, masculino, leve, moderada, no, si, no, si, bronquitis
+60, femenino, alta, severa, no, si, no, si, neumonia
+35, masculino, moderada, leve, si, no, si, no, otro
+45, femenino, moderada, severa, si, no, si, si, gripe
+55, masculino, alta, severa, no, si, si, si, neumonia
+20, femenino, leve, leve, si, no, no, si, resfriado
+50, masculino, moderada, moderada, si, no, no, si, gripe
+30, femenino, leve, leve, no, no, si, no, otro
+22, femenino, leve, moderada, si, no, si, no, resfriado
+33, masculino, leve, severa, no, si, si, si, neumonia
+43, femenino, alta, moderada, si, no, no, si, gripe
+36, masculino, moderada, moderada, si, no, si, si, gripe
+28, femenino, leve, leve, si, no, no, si, resfriado
+57, masculino, alta, severa, no, si, si, si, neumonia
+39, femenino, moderada, moderada, no, si, si, si, bronquitis
+49, masculino, moderada, leve, no, no, si, no, otro
+31, femenino, leve, moderada, si, no, si, si, resfriado
+27, masculino, leve, leve, si, no, no, si, resfriado
+46, femenino, moderada, moderada, si, no, si, si, gripe
+24, masculino, leve, moderada, no, si, no, si, bronquitis
+65, femenino, alta, severa, no, si, no, si, neumonia
+38, masculino, moderada, leve, si, no, si, no, otro
+47, femenino, moderada, severa, si, no, si, si, gripe
+52, masculino, alta, severa, no, si, si, si, neumonia
+23, femenino, leve, leve, si, no, no, si, resfriado
+51, masculino, moderada, moderada, si, no, no, si, gripe
+29, femenino, leve, leve, no, no, si, no, otro
+24, femenino, leve, moderada, si, no, si, no, resfriado
+34, masculino, leve, severa, no, si, si, si, neumonia
+44, femenino, alta, moderada, si, no, no, si, gripe
+38, masculino, moderada, moderada, si, no, si, si, gripe
+27, femenino, leve, leve, si, no, no, si, resfriado
+59, masculino, alta, severa, no, si, si, si, neumonia
+42, femenino, moderada, moderada, no, si, si, si, bronquitis
+48, masculino, moderada, leve, no, no, si, no, otro
+31, femenino, leve, moderada, si, no, si, si, resfriado
+29, masculino, leve, leve, si, no, no, si, resfriado
+41, femenino, moderada, leve, si, no, si, si, gripe
+26, masculino, leve, moderada, no, si, no, si, bronquitis
+63, femenino, alta, severa, no, si, no, si, neumonia
+37, masculino, moderada, leve, si, no, si, no, otro
+46, femenino, moderada, severa, si, no, si, si, gripe
+53, masculino, alta, severa, no, si, si, si, neumonia
+21, femenino, leve, leve, si, no, no, si, resfriado
+51, masculino, moderada, moderada, si, no, no, si, gripe
+30, femenino, leve, leve, no, no, si, no, otro
+23, femenino, leve, moderada, si, no, si, no, resfriado
+36, masculino, leve, severa, no, si, si, si, neumonia
+45, femenino, alta, moderada, si, no, no, si, gripe
+38, masculino, moderada, moderada, si, no, si, si, gripe
+27, femenino, leve, leve, si, no, no, si, resfriado
+58, masculino, alta, severa, no, si, si, si, neumonia
+43, femenino, moderada, moderada, no, si, si, si, bronquitis
+49, masculino, moderada, leve, no, no, si, no, otro
+34, femenino, leve, moderada, si, no, si, si, resfriado
