@@ -86,11 +86,11 @@ Haz una solicitud POST a este endpoint con un cuerpo JSON que contenga los sínt
 ## Estructura del Proyecto
 ```
  diagnosticador_er/
-├── diagnosticador.py  # Archivo principal de la aplicación
-├── datos.arff  # Archivo de datos
-├── requirements.txt  # Paquetes de Python requeridos
-├── collection_detector_er.json #Coleccion de Postman para hacer pruebas a la API
-└── README.md  # Archivo README del proyecto
+├── diagnosticador.py             # Archivo principal de la aplicación
+├── datos.arff                    # Archivo de datos
+├── requirements.txt              # Paquetes de Python requeridos
+├── collection_detector_er.json   #Coleccion de Postman para hacer pruebas a la API
+└── README.md                     # Archivo README del proyecto
 
 ```
 
