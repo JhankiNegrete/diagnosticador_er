@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import arff
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Permitir CORS para todas las rutas
 
 # Cargar el archivo ARFF y convertirlo a DataFrame de pandas
 def cargar_datos(fileName):

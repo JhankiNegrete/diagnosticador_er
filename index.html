@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico de Enfermedades Respiratorias</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Formulario de Diagnóstico</h1>
+    <form id="diagnosticoForm" class="mx-auto" style="max-width: 600px;">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="edad">Edad</label>
+          <input type="number" class="form-control" id="edad" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label>Género</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="genero" id="genero_masculino" value="1" required>
+            <label class="form-check-label" for="genero_masculino">Masculino</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="genero" id="genero_femenino" value="0">
+            <label class="form-check-label" for="genero_femenino">Femenino</label>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>Fiebre</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fiebre" id="fiebre_leve" value="leve" required>
+            <label class="form-check-label" for="fiebre_leve">Leve</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fiebre" id="fiebre_moderada" value="moderada">
+            <label class="form-check-label" for="fiebre_moderada">Moderada</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fiebre" id="fiebre_alta" value="alta">
+            <label class="form-check-label" for="fiebre_alta">Alta</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>Tos</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tos" id="tos_leve" value="leve" required>
+            <label class="form-check-label" for="tos_leve">Leve</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tos" id="tos_moderada" value="moderada">
+            <label class="form-check-label" for="tos_moderada">Moderada</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tos" id="tos_severa" value="severa">
+            <label class="form-check-label" for="tos_severa">Severa</label>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>Congestión Nasal</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="congestion_nasal" id="congestion_nasal_no" value="1"
+              required>
+            <label class="form-check-label" for="congestion_nasal_no">No</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="congestion_nasal" id="congestion_nasal_si" value="0">
+            <label class="form-check-label" for="congestion_nasal_si">Sí</label>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>Dificultad Respiratoria</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dificultad_respiratoria" id="dificultad_respiratoria_no"
+              value="1" required>
+            <label class="form-check-label" for="dificultad_respiratoria_no">No</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dificultad_respiratoria" id="dificultad_respiratoria_si"
+              value="0">
+            <label class="form-check-label" for="dificultad_respiratoria_si">Sí</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>Dolor de Garganta</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dolor_garganta" id="dolor_garganta_no" value="1"
+              required>
+            <label class="form-check-label" for="dolor_garganta_no">No</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dolor_garganta" id="dolor_garganta_si" value="0">
+            <label class="form-check-label" for="dolor_garganta_si">Sí</label>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>Malestar General</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="malestar_general" id="malestar_general_no" value="1"
+              required>
+            <label class="form-check-label" for="malestar_general_no">No</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="malestar_general" id="malestar_general_si" value="0">
+            <label class="form-check-label" for="malestar_general_si">Sí</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+        </div>
+        <div class="form-group col-md-6">
+          <button type="button" class="btn btn-secondary btn-block" id="limpiarFormulario">Limpiar</button>
+        </div>
+      </div>
+    </form>
+    <div class="mt-3" id="resultado"></div>
+  </div>
+
+  <script>
+    document.getElementById('diagnosticoForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const edad = document.getElementById('edad').value;
+      const genero = document.querySelector('input[name="genero"]:checked').value;
+      const fiebre = document.querySelector('input[name="fiebre"]:checked').value;
+      const tos = document.querySelector('input[name="tos"]:checked').value;
+      const fiebre_leve = fiebre === 'leve' ? 1 : 0;
+      const fiebre_moderada = fiebre === 'moderada' ? 1 : 0;
+      const fiebre_alta = fiebre === 'alta' ? 1 : 0;
+      const tos_leve = tos === 'leve' ? 1 : 0;
+      const tos_moderada = tos === 'moderada' ? 1 : 0;
+      const tos_severa = tos === 'severa' ? 1 : 0;
+      const congestion_nasal_no = document.querySelector('input[name="congestion_nasal"]:checked').value === "1" ? 1 : 0;
+      const dificultad_respiratoria_no = document.querySelector('input[name="dificultad_respiratoria"]:checked').value === "1" ? 1 : 0;
+      const dolor_garganta_no = document.querySelector('input[name="dolor_garganta"]:checked').value === "1" ? 1 : 0;
+      const malestar_general_no = document.querySelector('input[name="malestar_general"]:checked').value === "1" ? 1 : 0;
+
+      const data = {
+        edad: parseInt(edad),
+        genero: parseInt(genero),
+        fiebre_leve: fiebre_leve,
+        fiebre_moderada: fiebre_moderada,
+        fiebre_alta: fiebre_alta,
+        tos_leve: tos_leve,
+        tos_moderada: tos_moderada,
+        tos_severa: tos_severa,
+        congestion_nasal_no: congestion_nasal_no,
+        dificultad_respiratoria_no: dificultad_respiratoria_no,
+        dolor_garganta_no: dolor_garganta_no,
+        malestar_general_no: malestar_general_no
+      };
+
+      fetch(`http://127.0.0.1:5000/diagnostico`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('resultado').innerHTML = `<div class="alert alert-info">Diagnóstico: ${data.diagnostico}</div>`;
+        })
+        .catch(error => {
+          document.getElementById('resultado').innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`;
+        });
+    });
+
+    document.getElementById('limpiarFormulario').addEventListener('click', function () {
+      document.getElementById('diagnosticoForm').reset();
+      document.getElementById('resultado').innerHTML = '';
+    });
+  </script>
+</body>
+
+</html>
