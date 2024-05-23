@@ -13,6 +13,7 @@ Este proyecto proporciona una API RESTful para diagnosticar enfermedades respira
 - Pandas
 - Scikit-learn
 - Liac-arff
+- flask-cors
 
 ## Instalación
 1. Clona el repositorio:
@@ -32,6 +33,7 @@ Este proyecto proporciona una API RESTful para diagnosticar enfermedades respira
    python diagnosticador.py
    ```
 3. El endpoint de la API estará disponible en `http://127.0.0.1:5000/diagnostico`.
+4. puedes hacer consumo abriendo el index.html que se encuentra en el directorio del proyecto (abriendo o montando en el host con live server).
 
 ## Endpoint de la API
 
